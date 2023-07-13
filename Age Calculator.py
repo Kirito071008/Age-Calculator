@@ -1,3 +1,16 @@
-birth_year = int(input("What year were you born?"))
-age = 2023 - birth_year
-print(f"Then you are {age} years old")
+import datetime
+
+def age_calculator(birthday):
+    today_date = datetime.date.today()
+    differnce = today_date - birthday
+    age_in_years = differnce.days // 365
+    return age_in_years
+
+year = int(input("Inserisci l'anno di nascita (YYYY): "))
+month = int(input("Inserisci il mese di nascita (MM): "))
+day = int(input("Inserisci il giorno di nascita (DD): "))
+
+birthday = datetime.date(year, month, day)
+eta = age_calculator(birthday)
+
+print("You are:", eta, "years old")
