@@ -11,6 +11,6 @@ month = int(input("Inserisci il mese di nascita (MM): "))
 day = int(input("Inserisci il giorno di nascita (DD): "))
 
 birthday = datetime.date(year, month, day)
-eta = age_calculator(birthday)
+age = age_calculator(birthday)
 
-print("You are:", eta, "years old")
+print("You are:", age, "years old")
